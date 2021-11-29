@@ -15,11 +15,7 @@ router.get('/city/:name/skill/:skill', async (req, res) => {
 
     try{
 
-        let reqSkill = req.params.skill;
-
-        const jobs = await Job.find({$and: [ {"city": req.params.name}, {reqSkill: {$in: 'skills'}}]}).lean().exec();
-
-        console.log(reqSkill);
+        const jobs = await Job.find({$and: [ {"city": req.params.name}, {"skills": req.params.skill} ] } ).lean().exec();
 
         return res.send(jobs);
 

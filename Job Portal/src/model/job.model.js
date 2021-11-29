@@ -11,7 +11,7 @@ const jobSchema = new mongoose.Schema({
         required: true
     },
     notice_period: {type: Number, required: true},
-    skills: [{type: String, required: true}]
+    skills: {type: String, required: true}
 }, {
     versionKey: false,
     timestamps: true
