@@ -9,12 +9,18 @@ const upload = require('./middlewares/upload');
 const {register, login} = require('./controllers/auth.contoller');
 const movieController = require('./controllers/movie.controller');
 const showController = require('./controllers/show.controller');
+const screenController = require('./controllers/screen.controller');
+const seatController = require('./controllers/seat.controller');
 
 app.use('/login', login);
 app.use('/register', upload.single('profile_photo_url'), register);
 
 app.use('/movies', movieController);
-app.use('/show', showController);
+app.use('/shows', showController);
+app.use('/seats', seatController);
+app.use('/screens', screenController);
+
+
 
 
 
