@@ -11,6 +11,7 @@ const movieController = require('./controllers/movie.controller');
 const showController = require('./controllers/show.controller');
 const screenController = require('./controllers/screen.controller');
 const seatController = require('./controllers/seat.controller');
+const theatreController = require('./controllers/theatre.controller');
 
 app.use('/login', login);
 app.use('/register', upload.single('profile_photo_url'), register);
@@ -19,6 +20,8 @@ app.use('/movies', movieController);
 app.use('/shows', showController);
 app.use('/seats', seatController);
 app.use('/screens', screenController);
+app.use('/theatres', theatreController);
+
 
 
 
