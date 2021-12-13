@@ -4,6 +4,18 @@ const upload = require('../middlewares/upload');
 const Movie = require('../models/movie.model');
 const authenticate = require('../middlewares/authenticate');
 
+router.get('/', authenticate, async (req, res) => {
+
+    try{
+        const movie = await Movie.find({}).lean().exec();
+
+        return res.send(movie);
+
+    }catch(err){
+        return res.status(500).send({ message: err.message, status: 'Failed' });
+    }
+
+});
 
 router.post('/', authenticate, async (req, res) => {
 
