@@ -6,7 +6,7 @@ const userSchema = new Schema({
     name: {type: String, required: true},
     email: {type: String, required: true, unique: true},
     password: {type: String, required: true},
-    profile_photo_url: {type: String, required: true},
+    profile_photo_url: {type: String, required: false},
     roles: [{type: String, required: true}]
 },{
     versionKey: false,
@@ -17,23 +17,26 @@ const userSchema = new Schema({
 userSchema.pre('save', function(next) {
     if(!this.isModified('password')) return next();
 
-    bcrypt.hash(this.password, 12, function(err, hash) {
-        if(err) throw err;
+    const hashPassword = bcrypt.hashSync(this.password, 12);
+    // console.log(hashPassword);
+    this.password = hashPassword;
 
-        this.password = hash;
-        next();
-    });
+    next();
 });
 
 
-userSchema.methods.checkPassword = (password) =>{
-    const hashPassord = this.password;
+userSchema.methods.checkPassword = function(password) {
+    const hashPassword = this.password;
 
-    bcrypt.compare(password, hashPassword, function(err, same) {
-        if(err) throw err;
+    return new Promise(function(resolve, reject) {
+        bcrypt.compare(password, hashPassword, function(err, same) {
+            if(err) return reject(err);
+    
+            return resolve(same);
+        });
+    })
 
-        return same;
-    });
+    
 }
 
 const User = model('user', userSchema);

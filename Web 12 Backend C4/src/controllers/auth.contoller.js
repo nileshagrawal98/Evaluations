@@ -7,12 +7,13 @@ const newToken = (user) => {
 }
 
 
-const register = async () => {
+const register = async (req, res) => {
 
     let user;
+    console.log(req)
 
     try {
-        user = await user.findOne({ email: req.body.email }).lean().exec();
+        user = await User.findOne({ email: req.body.email }).lean().exec();
 
         if (user) {
             return res.status(400).send({ message: 'Email already registered', status: 'failed' });
@@ -22,7 +23,7 @@ const register = async () => {
             name: req.body.name,
             email: req.body.email,
             password: req.body.password,
-            profile_photo_url: req.file.path,
+            // profile_photo_url: req.file.path,
             roles: req.body.roles
         });
 
@@ -35,7 +36,7 @@ const register = async () => {
 
 }
 
-const login = async() => {
+const login = async(req, res) => {
 
     let user;
     try {
@@ -46,8 +47,8 @@ const login = async() => {
             return res.status(400).send({message: 'Wrong email or password', status: 'Failed'});
         }
 
-        const match = user.checkPassword(req.body.password);
-
+        const match = await user.checkPassword(req.body.password);
+        console.log(match)
         if(!match){
             return res.status(400).send({message: 'Wrong email or password', status: 'Failed'});
         }

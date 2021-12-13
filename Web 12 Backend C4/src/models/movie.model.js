@@ -5,7 +5,7 @@ const movieSchema = new Schema({
     actors: [{type: String, required: true}],
     languages: [{type: String, required: true}],
     directors: [{type: String, required: true}],
-    poster_url: {type: String, required: true},
+    poster_url: {type: String, required: false},
 },{
     versionKey: false,
     timestamps: true
