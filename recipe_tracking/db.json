@@ -87,6 +87,14 @@
       "image": "https://foodish-api.herokuapp.com/images/idly/idly75.jpg",
       "instructions": "inst1, inst2, inst3",
       "id": 11
+    },
+    {
+      "title": "qwer",
+      "ingredients": "sdf",
+      "time": "789",
+      "image": "https://foodish-api.herokuapp.com/images/dessert/dessert4.jpg",
+      "instructions": "dfa",
+      "id": 12
     }
   ]
 }

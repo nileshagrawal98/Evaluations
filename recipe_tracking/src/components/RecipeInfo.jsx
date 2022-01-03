@@ -11,7 +11,7 @@ export const RecipeInfo = ({ recipe }) => {
             <p>Instructions: {recipe.instructions}</p>
         </div>
         <div>
-            <img src={recipe.image} alt={recipe.title} width="100"/>
+            <img src={recipe.image} alt={recipe.title} width="200"/>
         </div>
 
     </div>
