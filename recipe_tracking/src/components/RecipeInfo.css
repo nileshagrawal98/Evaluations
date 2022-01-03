@@ -1,0 +1,14 @@
+.recipe-info {
+    display: flex;
+    max-width: 1200px;
+    margin: 15px auto;
+    align-items: center;
+    justify-content: center;
+    background-color: #393E46;
+}
+
+.recipe-info > div:nth-of-type(1){
+    font-size: 20px;
+    margin-right: 20px;
+    max-width: 800px;
+}

@@ -1,0 +1,28 @@
+form {
+    border: 1px solid #393E46;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: #393E46;
+    color: #EEEEEE;
+}
+
+form > div {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+form > div > label{
+    margin-right: 5px;
+}
+
+.submit-btn {
+    margin-top: 15px;
+    height: 30px;
+    background-color: #00ADB5;
+    border: none;
+    border-radius: 5%;
+    color: #EEEEEE;
+    cursor: pointer;
+}

@@ -1,0 +1,44 @@
+{
+  "recipe": [
+    {
+      "title": "Biryani",
+      "ingredients": "Rice, Veggies",
+      "time": "1Hr",
+      "image": "https://foodish-api.herokuapp.com/images/biryani/biryani15.jpg",
+      "instructions": "Cook everything.",
+      "id": 1
+    },
+    {
+      "title": "Burger",
+      "ingredients": "Potato, Buns",
+      "time": "15min",
+      "image": "https://foodish-api.herokuapp.com/images/burger/burger81.jpg",
+      "instructions": "Go to any resturant",
+      "id": 2
+    },
+    {
+      "title": "Pizza",
+      "ingredients": "Cheese, Bread",
+      "time": "1Hr",
+      "image": "https://foodish-api.herokuapp.com/images/burger/burger81.jpg",
+      "instructions": "Cook in oven",
+      "id": 3
+    },
+    {
+      "title": "Noodles",
+      "ingredients": "Packet , Masala",
+      "time": "15min",
+      "image": "https://foodish-api.herokuapp.com/images/burger/burger81.jpg",
+      "instructions": "Cook",
+      "id": 4
+    },
+    {
+      "title": "Tika",
+      "ingredients": "Panner, masala",
+      "time": "1hr",
+      "image": "https://foodish-api.herokuapp.com/images/burger/burger81.jpg",
+      "instructions": "Cook",
+      "id": 5
+    }
+  ]
+}
