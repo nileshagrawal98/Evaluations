@@ -33,7 +33,7 @@ function App() {
       <h1>Recipes</h1>
       <div className="top-section">
         <Form setForm={setForm} form={form} setChanged={setChanged} />
-        <List recipes={recipes} setSelectedRecipe={setSelectedRecipe} setRecipes={setRecipes}/>
+        <List recipes={recipes} setSelectedRecipe={setSelectedRecipe} setRecipes={setRecipes} />
       </div>
       {selectedRecipe && <RecipeInfo recipe={selectedRecipe} />}
     </div>

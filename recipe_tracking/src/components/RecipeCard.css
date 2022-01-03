@@ -5,4 +5,5 @@
     margin: 5px auto;
     display: flex;
     justify-content: space-around;
+    cursor: pointer;
 }

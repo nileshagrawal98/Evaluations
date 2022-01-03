@@ -26,3 +26,7 @@ form > div > label{
     color: #EEEEEE;
     cursor: pointer;
 }
+
+.note-text {
+    font-size: 12px;
+}

@@ -1,6 +1,8 @@
 import './RecipeInfo.css'
 
 export const RecipeInfo = ({ recipe }) => {
+
+
     return <div className="recipe-info">
         <div>
             <p>Title: {recipe.title}</p>
