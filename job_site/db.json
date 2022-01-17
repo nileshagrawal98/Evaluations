@@ -1,0 +1,44 @@
+{
+  "jobs": [
+    {
+      "company": "asdf",
+      "title": "asdf",
+      "salary": 100,
+      "description": "asdfasdf",
+      "location": "asdfasd",
+      "type": "asdf",
+      "id": 1,
+      "applied": false
+    },
+    {
+      "company": "asdf",
+      "title": "asdf",
+      "salary": 200,
+      "description": "asdf",
+      "location": "asdfa",
+      "type": "sdf",
+      "id": 2,
+      "applied": false
+    },
+    {
+      "company": "asdfasdfasdf",
+      "title": "sadfasdfasdf",
+      "salary": 300,
+      "description": "asdfasdfasdf",
+      "location": "asdfasdfasdf",
+      "type": "asdfasdfasdf",
+      "id": 3,
+      "applied": true
+    },
+    {
+      "company": "ewrqwqer",
+      "title": "qewrqwer",
+      "salary": "42342",
+      "description": "wrwer",
+      "location": "werwer",
+      "type": "werwer",
+      "applied": false,
+      "id": 4
+    }
+  ]
+}
