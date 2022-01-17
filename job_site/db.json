@@ -18,7 +18,7 @@
       "location": "asdfa",
       "type": "sdf",
       "id": 2,
-      "applied": false
+      "applied": true
     },
     {
       "company": "asdfasdfasdf",
@@ -28,7 +28,7 @@
       "location": "asdfasdfasdf",
       "type": "asdfasdfasdf",
       "id": 3,
-      "applied": true
+      "applied": false
     },
     {
       "company": "ewrqwqer",

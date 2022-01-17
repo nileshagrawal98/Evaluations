@@ -59,7 +59,7 @@ export const ClientPage = () => {
             title: 'Applied',
             dataIndex: 'applied',
             key: 'applied',
-            render: (record, item) => <span onClick={() => handleApplyJob(item.id, item.applied)}>{item.applied ? 'Yes' : 'No'}</span>
+            render: (record, item) => <span style={{color: 'blue', cursor: 'pointer'}} onClick={() => handleApplyJob(item.id, item.applied)}>{item.applied ? 'Yes' : 'No'}</span>
         }
     ]
 
@@ -68,14 +68,16 @@ export const ClientPage = () => {
     }
 
     const handleApplyJob = (id, curr) => {
-        console.log(id, curr)
+        const payload = { applied: !curr};
         fetch(`http://localhost:3001/jobs/${id}`, {
             method: 'PATCH',
-            body: JSON.stringify({"applied": !curr}),
-            Headers: {
+            body: JSON.stringify(payload),
+            headers: {
                 "Content-type": "application/json"
             }
-        }).then(() => getData());
+        }).then(res => res.json())
+        .then(() => getData())
+        .catch(err => console.log(err));
     }
 
 
