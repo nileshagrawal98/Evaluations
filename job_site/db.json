@@ -1,44 +1,54 @@
 {
   "jobs": [
     {
-      "company": "asdf",
-      "title": "asdf",
-      "salary": 100,
-      "description": "asdfasdf",
-      "location": "asdfasd",
-      "type": "asdf",
-      "id": 1,
-      "applied": false
+      "company": "Job 1",
+      "title": "Developer",
+      "salary": "50000",
+      "description": "Development",
+      "location": "Delhi",
+      "type": "WFH",
+      "applied": true,
+      "id": 5
     },
     {
-      "company": "asdf",
-      "title": "asdf",
-      "salary": 200,
-      "description": "asdf",
-      "location": "asdfa",
-      "type": "sdf",
-      "id": 2,
-      "applied": true
+      "company": "Benti",
+      "title": "Developer",
+      "salary": "1000000",
+      "description": "Development",
+      "location": "Bangalore",
+      "type": "From Office",
+      "applied": true,
+      "id": 6
     },
     {
-      "company": "asdfasdfasdf",
-      "title": "sadfasdfasdf",
-      "salary": 300,
-      "description": "asdfasdfasdf",
-      "location": "asdfasdfasdf",
-      "type": "asdfasdfasdf",
-      "id": 3,
-      "applied": false
-    },
-    {
-      "company": "ewrqwqer",
-      "title": "qewrqwer",
-      "salary": "42342",
-      "description": "wrwer",
-      "location": "werwer",
-      "type": "werwer",
+      "company": "Green",
+      "title": "Manager",
+      "salary": "755555",
+      "description": "Management",
+      "location": "Delhi",
+      "type": "From Office",
       "applied": false,
-      "id": 4
+      "id": 7
+    },
+    {
+      "company": "Leaf",
+      "title": "Programmer",
+      "salary": "4698533",
+      "description": "Programming",
+      "location": "Pune",
+      "type": "Work From Home",
+      "applied": false,
+      "id": 8
+    },
+    {
+      "company": "Choco",
+      "title": "Manager",
+      "salary": "79465412",
+      "description": "Managetment",
+      "location": "Delhi",
+      "type": "From Office",
+      "applied": true,
+      "id": 9
     }
   ]
 }

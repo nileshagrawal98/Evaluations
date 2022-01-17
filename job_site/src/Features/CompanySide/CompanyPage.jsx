@@ -1,5 +1,5 @@
 import { Button, Input } from "antd"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux";
 import { addJob, addJobFailed, addJobLoading, addJobSuccess } from "./actions";
 import { ADD_JOB_LOADING } from "./actionTypes";
@@ -7,6 +7,8 @@ import { ADD_JOB_LOADING } from "./actionTypes";
 export const CompanyPage = () => {
 
     const userRole = useSelector(state => state.authState.role);
+    const [jobs, setJobs] = useState([]);
+
 
     const [company, setCompany] = useState('');
     const [title, setTitle] = useState('');
@@ -29,6 +31,17 @@ export const CompanyPage = () => {
         .catch(err => dispatch(addJobFailed(err)))
     }
 
+    const getData = () => {
+        fetch('http://localhost:3001/jobs/')
+            .then(res => res.json())
+            .then(data => setJobs(data))
+            .catch(err => console.log(err))
+    }
+
+    useEffect(() => {
+        getData();
+    }, [])
+
     if(userRole !== 'admin' && userRole !== 'company'){
         return <h2>You are not allowed to use this page</h2>
     }
@@ -44,6 +57,12 @@ export const CompanyPage = () => {
             <Input placeholder="Job Type" value={type} onChange={e => setType(e.target.value)} />
             <Button onClick={handleAddJob}>Add Job</Button>
 
+        </div>
+        <div>
+            <h2>Applied Jobs:</h2>
+            {
+                jobs.map(job => job.applied && <h4 id={job.id}>Title: {job.title}, Company:{job.company}</h4>)
+            }
         </div>
     </div>
 
